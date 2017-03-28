@@ -1,0 +1,64 @@
+/* CSS declarations go here */
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url("/images/background.jpg");
+	background-size: cover;
+}
+
+h1 {
+	text-align: center;
+	font-size: 3em;
+	margin-top: 0;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+img {
+	display: block;
+}
+
+.tiles {
+	@arrow-size: 150px;
+	margin-top: 30px;
+
+	.label {
+		display: block;
+		text-align: center;
+		font-size: 1.7em;
+		margin-bottom: 20px;
+	}
+
+	.tile {
+		position: relative;
+	}
+
+	.tile-arrow {
+		position: absolute;
+		top: 50%;
+		margin-top: -@arrow-size/2;
+		height: @arrow-size;
+	}
+
+	.tile-btn {
+		cursor: pointer;
+		background: rgba(139, 146, 165, 0.7);
+		padding: 10px;
+	}
+
+	.disabled {
+		img {
+			filter: grayscale(80%);
+			opacity: 0.6;
+		}
+	}
+}
