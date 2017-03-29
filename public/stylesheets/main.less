@@ -62,3 +62,41 @@ img {
 		}
 	}
 }
+
+.modal {
+	@padding: 30px;
+	@margin: 30px;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10000;
+	background: rgba(0, 0, 0, 0.7);
+	padding: @margin;
+
+	.modal-container {
+		background: white;
+		padding: @padding;
+
+		.close {
+			position: absolute;
+			display: block;
+			
+			right: @margin + 10px;
+			top: @margin + 10px;
+
+			font-size: 2em;
+			line-height: 0.5em;
+			
+			color: #999;
+
+			cursor: pointer;
+
+			&:hover {
+				color: black;
+			}
+		}
+	}
+}
